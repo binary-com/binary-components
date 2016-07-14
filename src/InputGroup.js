@@ -23,13 +23,14 @@ export default class InputGroup extends Component {
 	};
 
 	render() {
-		const { id, className, label, type, hint, value, min, max, list,
+		const { id, className, type, hint, value, min, max, list,
 			readOnly, placeholder, onChange, autoComplete, defaultValue, step } = this.props;
+		const strLabel = this.props.label;
 
 		return (
 			<fieldset className={className}>
-				{label && <label htmlFor={id}>
-					<M m={label} />
+				{strLabel && <label htmlFor={id}>
+					<M m={strLabel} />
 				</label>}
 				<input
 					id={id}
