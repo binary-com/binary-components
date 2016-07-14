@@ -23,7 +23,6 @@ export default class InputGroup extends Component {
 	};
 
 	render() {
-<<<<<<< Updated upstream
 		const { id, className, type, hint, value, min, max, list,
 			readOnly, placeholder, onChange, autoComplete, defaultValue, step } = this.props;
 		const strLabel = this.props.label;
