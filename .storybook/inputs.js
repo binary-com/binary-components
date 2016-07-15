@@ -1,11 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
-import ControlledNumericInput from '../src/ControlledNumericInput';
+import NumericInput from '../src/NumericInput';
 import DateOfBirth from '../src/DateOfBirth';
 
 storiesOf('Inputs', module)
     .add('NumericInput', () =>
-        <ControlledNumericInput />
+        <NumericInput />
     )
     .add('DateOfBirth', () =>
         <DateOfBirth />
