@@ -1,13 +1,13 @@
 import React, { PropTypes, Component } from 'react';
 
-export default class NumericInput extends Component {
+export default class ControlledNumericInput extends Component {
 
     static propTypes = {
         className: PropTypes.string,
         min: PropTypes.number,
         max: PropTypes.number,
         step: PropTypes.number,
-        value: PropTypes.number,
+        value: PropTypes.any,
         valueList: PropTypes.array,
         onChange: PropTypes.func,
     };
