@@ -16,4 +16,14 @@ describe('<NumericInput />', () => {
         wrapper.find('.step-up').simulate('click');
         expect(onButtonClick).to.have.property('callCount', 1);
     });
+
+    it('should handle defaultValue', () => {
+        const wrapper = shallow(<NumericInput defaultValue={20} />);
+        expect(wrapper.find('input')).to.have.length(1);
+    });
+
+    it('should throw when both defaultValue and value exist', () => {
+        const shouldThrow = () => shallow(<NumericInput defaultValue={20} value={30} />);
+        expect(shouldThrow).to.throw(Error);
+    });
 });
