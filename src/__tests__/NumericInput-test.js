@@ -12,7 +12,7 @@ describe('<NumericInput />', () => {
 
     it('clicking the up button changes the value', () => {
         const onButtonClick = sinon.spy();
-        const wrapper = shallow(<NumericInput onChange={onButtonClick} />);
+        const wrapper = shallow(<NumericInput onChange={onButtonClick} value={123.123} />);
         wrapper.find('.step-up').simulate('click');
         expect(onButtonClick).to.have.property('callCount', 1);
     });
