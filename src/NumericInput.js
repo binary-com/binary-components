@@ -49,6 +49,12 @@ export default class NumericInput extends PureComponent {
         this.props.onChange(e);
     }
 
+    componentWillUpdate(nProps, nState){
+        if (this.state.value.length - nState.value.length === 2) {
+            this.refs.barrierVal.value = '0' + nState.value;
+        }
+    }
+
     render() {
         const { className, step, min, max, valueList } = this.props;
         const { value } = this.state;
@@ -63,6 +69,7 @@ export default class NumericInput extends PureComponent {
                     step={step}
                     list="values"
                     onChange={this.onChange}
+                    ref="barrierVal"
                 />
                 <button className="btn-flat step-up" onClick={this.onStepUp}>+</button>
                 <datalist id="values">
