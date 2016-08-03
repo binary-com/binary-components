@@ -21,6 +21,7 @@ export default class InputGroup extends PureComponent {
 		placeholder: PropTypes.string,
 		onChange: PropTypes.func,
 		autoComplete: PropTypes.string,
+		maxLength: PropTypes.string,
 	};
 
 	render() {
