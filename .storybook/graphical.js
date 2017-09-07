@@ -6,7 +6,6 @@ import DownArrow from '../src/graphical/DownArrow';
 import Info from '../src/graphical/Info';
 import Logo from '../src/graphical/Logo';
 import LogoSpinner from '../src/graphical/LogoSpinner';
-import Star from '../src/graphical/Star';
 
 storiesOf('Graphical', module)
     .add('CloseButton', () =>

@@ -5,7 +5,6 @@ export { default as DownArrow } from './graphical/DownArrow';
 export { default as Info } from './graphical/Info';
 export { default as Logo } from './graphical/Logo';
 export { default as LogoSpinner } from './graphical/LogoSpinner';
-export { default as Star } from './graphical/Star';
 
 export { default as Button } from './i18n/Button';
 export { default as ErrorMsg } from './i18n/ErrorMsg';
