@@ -35,6 +35,7 @@ export { default as RadioGroup } from './input/RadioGroup';
 export { default as RadioItem } from './input/RadioItem';
 export { default as RangeGroup } from './input/RangeGroup';
 export { default as SelectGroup } from './input/SelectGroup';
+export { default as MultiSelectGroup } from './input/MultiSelectGroup';
 
 export { default as Clock } from './misc/Clock';
 export { default as DigitStatsChart } from './misc/DigitStatsChart';

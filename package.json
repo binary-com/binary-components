@@ -69,6 +69,7 @@
   },
   "dependencies": {
     "binary-utils": "*",
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "react-select": "^1.0.0-rc.5"
   }
 }
