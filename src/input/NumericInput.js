@@ -7,6 +7,7 @@ type Props = {
     max: number,
     integer: boolean,
     defaultValue: number,
+    step: number,
     valueList: number[],
     onChange: (newValue: number) => void,
 }
@@ -22,6 +23,7 @@ export default class NumericInput extends PureComponent {
     static defaultProps = {
         defaultValue: 0,
         decimals: 2,
+        step: 0,
     };
 
     constructor(props: Props) {
@@ -56,13 +58,18 @@ export default class NumericInput extends PureComponent {
         this.changeValue(newValue);
     }
 
-    onStepUp = () =>
-        this.addDiffWithChecks(this.step());
+    onStepUp = () => {
+        const step = this.props.step || this.step();
+        this.addDiffWithChecks(step);
+    }
 
     onStepDown = () => {
-        const smallerStepDown = (this.state.value).toString()[0] === '1';
-        const step = smallerStepDown ? -this.step() / 10 : -this.step();
-        this.addDiffWithChecks(step);
+        let step = this.props.step;
+        if (!step) {
+          const smallerStepDown = (this.state.value).toString()[0] === '1';
+          step = smallerStepDown ? this.step() / 10 : this.step();
+        }
+        this.addDiffWithChecks(-step);
     }
 
     // this function should not check and change input value automatically!!
