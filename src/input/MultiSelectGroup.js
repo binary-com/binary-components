@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import Select from 'react-select';
+import '!style-loader!css-loader!react-select/dist/react-select.css';
 
 type Option = {
   text: string,
