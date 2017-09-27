@@ -9,10 +9,11 @@ export default class InputGroup extends PureComponent {
 		className: string,
 		label: string,
 		placeholder: string,
+		readOnly: boolean,
 	};
 
 	render() {
-		const { label, className, id, placeholder, ...rest } = this.props;
+		const { label, className, id, placeholder, readOnly, ...rest } = this.props;
 
 		return (
 			<fieldset className={className}>
@@ -20,7 +21,7 @@ export default class InputGroup extends PureComponent {
 				{placeholder ?
 					<FormattedMessage id={placeholder} defaultMessage={placeholder}>
 						{(message: string) =>
-							<input id={id} placeholder={message} {...rest} />
+							<input id={id} placeholder={message} readOnly={readOnly} {...rest} />
 						}
 					</FormattedMessage> :
 					<input id={id} {...rest} />

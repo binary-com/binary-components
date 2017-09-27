@@ -4,6 +4,7 @@ import Label from '../i18n/Label';
 type Option = {
 	text: string,
 	value: string,
+	disabled: boolean,
 }
 
 export default class SelectGroup extends PureComponent {
@@ -31,7 +32,7 @@ export default class SelectGroup extends PureComponent {
 				{label && <Label htmlFor={id} text={label} />}
 				<select id={id} readOnly={readOnly} onChange={onChange} value={value}>
 					{options.map((o: Option) =>
-						<option key={o.value} value={o.value}>{o.text}</option>
+						<option key={o.value} value={o.value} disabled={o.disabled}>{o.text}</option>
 					)}
 				</select>
 				{hint && <p className="hint">{hint}</p>}
