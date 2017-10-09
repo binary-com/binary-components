@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import CloseButton from '../src/graphical/CloseButton';
+import BackButton from '../src/graphical/BackButton';
 import Direction from '../src/graphical/Direction';
 import DownArrow from '../src/graphical/DownArrow';
 import Info from '../src/graphical/Info';
@@ -10,6 +11,9 @@ import LogoSpinner from '../src/graphical/LogoSpinner';
 storiesOf('Graphical', module)
     .add('CloseButton', () =>
         <CloseButton />
+    )
+    .add('BackButton', () =>
+        <BackButton />
     )
     .add('Info', () =>
         <Info />
