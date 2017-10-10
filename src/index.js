@@ -1,4 +1,5 @@
 export { default as CloseButton } from './graphical/CloseButton';
+export { default as BackButton } from './graphical/BackButton';
 export { default as Direction } from './graphical/Direction';
 export { default as DirectionAndValue } from './graphical/DirectionAndValue';
 export { default as DownArrow } from './graphical/DownArrow';
