@@ -7,13 +7,13 @@ describe('<NumberColored />', () => {
 		const wrapper = shallow(
 			<NumberColored value={3} currency="USD" />
 		);
-		expect(wrapper.node.props.className).toEqual('number-positive');
+		expect(wrapper.getElements().props.className).toEqual('number-positive');
 	});
 
 	it('should contain the class number-negative ', () => {
 		const wrapper = shallow(
 			<NumberColored value={-5} currency="USD" />
 		);
-		expect(wrapper.node.props.className).toEqual('number-negative');
+		expect(wrapper.getElements().props.className).toEqual('number-negative');
 	});
 });

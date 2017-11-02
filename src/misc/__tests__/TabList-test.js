@@ -11,7 +11,7 @@ describe('<TabList />', () => {
 
     it('should render a single item if contained', () => {
         const wrapper = shallow(<TabList>Hello</TabList>);
-        expect(wrapper.nodes.length).toEqual(1);
+        expect(wrapper.getElements().length).toEqual(1);
     });
 
     it('should render as many children as contained', () => {
