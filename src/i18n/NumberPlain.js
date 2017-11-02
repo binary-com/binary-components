@@ -11,7 +11,6 @@ export default class NumberPlain extends PureComponent {
 	};
 
 	static defaultProps = {
-		currency: undefined,
 		style: 'decimal',
 		digits: 2,
 	};

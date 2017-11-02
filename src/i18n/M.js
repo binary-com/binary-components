@@ -9,12 +9,6 @@ export default class M extends PureComponent {
 		values?: Object,
 	};
 
-	static defaultProps = {
-		id: undefined,
-		values: undefined,
-		className: undefined
-    };
-
 	render() {
 		const { m, values, id, className } = this.props;
 
