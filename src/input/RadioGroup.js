@@ -11,7 +11,7 @@ export default class RadioGroup extends PureComponent {
 	props: {
 		className?: string,
 		name: string,
-		options?: Options[],
+		options: Options[],
 		onChange: (e: SyntheticEvent) => void,
 		value: any,
 	};

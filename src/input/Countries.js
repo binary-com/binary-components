@@ -10,7 +10,7 @@ export default class Countries extends PureComponent {
 	props: {
 		value: string,
 		onChange: (e: SyntheticEvent) => void,
-		residenceList?: Residence[],
+		residenceList: Residence[],
 		readOnly: boolean,
 	};
 

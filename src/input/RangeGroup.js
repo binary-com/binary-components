@@ -3,7 +3,7 @@ import Label from '../i18n/Label';
 
 export default class RangeGroup extends PureComponent {
 	props: {
-		items?: number[],
+		items: number[],
 		id: string,
 		label: string,
 	};

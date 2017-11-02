@@ -6,8 +6,8 @@ type Props = {
     min: number,
     max: number,
     integer: boolean,
-    defaultValue?: number,
-    step?: number,
+    defaultValue: number,
+    step: number,
     valueList: number[],
     onChange: (newValue: number) => void,
 }

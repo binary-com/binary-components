@@ -4,7 +4,7 @@ type Props = {
     id: string,
     className: string,
     children: Node,
-    activeIndex?: number,
+    activeIndex: number,
     vertical?: bool,
     showText?: bool,
     showIcons?: bool,

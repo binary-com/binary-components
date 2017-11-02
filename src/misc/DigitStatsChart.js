@@ -3,8 +3,8 @@ import { arrayMin, arrayMax } from 'binary-utils';
 
 export default class DigitStatsChart extends PureComponent {
 	props: {
-		orientation?: string,
-		stats?: number[],
+		orientation: string,
+		stats: number[],
 	};
 
 	static defaultProps = {

@@ -13,7 +13,7 @@ export default class SelectGroup extends PureComponent {
 		id: string,
 		className: string,
 		label: string,
-		options?: Option[],
+		options: Option[],
 		readOnly: bool,
 		value: string,
 		onChange: (e: SyntheticEvent) => void,
