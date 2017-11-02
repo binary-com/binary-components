@@ -7,7 +7,7 @@ type Props = {
     max: number,
     integer: boolean,
     defaultValue: number,
-    step: number,
+    step?: number,
     valueList: number[],
     onChange: (newValue: number) => void,
 }

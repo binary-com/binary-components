@@ -3,7 +3,7 @@ import { FormattedNumber } from 'react-intl';
 
 export default class NumberPlain extends PureComponent {
 	props: {
-		className: string,
+		className?: string,
 		currency?: string,
 		digits?: number,
 		style?: 'decimal' | 'currency' | 'percent',
