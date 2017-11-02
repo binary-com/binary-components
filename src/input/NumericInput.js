@@ -63,7 +63,7 @@ export default class NumericInput extends PureComponent {
     }
 
     onStepDown = () => {
-        let { step } = this.props.step;
+        let { step } = this.props;
         if (!step) {
           const smallerStepDown = (this.state.value).toString()[0] === '1';
           step = smallerStepDown ? this.step() / 10 : this.step();
