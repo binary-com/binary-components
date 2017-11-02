@@ -1,7 +1,8 @@
 import React from 'react';
-import { shallow, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { IntlProvider } from 'react-intl';
 import ErrorMsg from '../ErrorMsg';
+import P from '../P';
 
 describe('<ErrorMsg />', () => {
     it('does not render when no properties provided', () => {
@@ -10,12 +11,12 @@ describe('<ErrorMsg />', () => {
     });
 
     it('renders P component', () => {
-        const wrapper = render(
+        const wrapper = mount(
             <IntlProvider locale="en">
                 <ErrorMsg className="someClass" text="some" />
              </IntlProvider>
         );
-        expect(wrapper.find('P').length).toEqual(1);
+        expect(wrapper.find(P).length).toEqual(1);
     });
 
     it('appends className passed to classes of P', () => {
