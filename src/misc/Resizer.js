@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 export default class Resizer extends PureComponent {
-
 	props: {
 		className: string,
 		onResize: (e: Event) => void,

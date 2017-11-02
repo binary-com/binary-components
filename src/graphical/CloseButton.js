@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 export default class CloseButton extends PureComponent {
-
     render() {
         return (
             <a className="close-btn" {...this.props}>

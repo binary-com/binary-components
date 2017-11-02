@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl';
 import Label from '../i18n/Label';
 
 export default class InputGroup extends PureComponent {
-
 	props: {
 		id: string,
 		className: string,

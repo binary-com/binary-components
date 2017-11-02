@@ -2,18 +2,17 @@ import React, { PureComponent } from 'react';
 
 type Props = {
     className: string,
-    decimals: number,
+    decimals?: number,
     min: number,
     max: number,
     integer: boolean,
-    defaultValue: number,
-    step: number,
+    defaultValue?: number,
+    step?: number,
     valueList: number[],
     onChange: (newValue: number) => void,
 }
 
 export default class NumericInput extends PureComponent {
-
     props: Props;
 
     state: {
@@ -64,7 +63,7 @@ export default class NumericInput extends PureComponent {
     }
 
     onStepDown = () => {
-        let step = this.props.step;
+        let { step } = this.props.step;
         if (!step) {
           const smallerStepDown = (this.state.value).toString()[0] === '1';
           step = smallerStepDown ? this.step() / 10 : this.step();
@@ -108,9 +107,9 @@ export default class NumericInput extends PureComponent {
                 <button className="btn-flat step-up" onClick={this.onStepUp}>+</button>
                 {valueList &&
                     <datalist id="values">
-                        {valueList.map((x: number) =>
+                        {valueList.map((x: number) => (
                             <option key={x} value={x} />
-                        )}
+                        ))}
                     </datalist>
                 }
             </div>

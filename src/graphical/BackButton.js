@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 export default class BackButton extends PureComponent {
-
   render() {
     return (
       <a className="back-btn" {...this.props}>

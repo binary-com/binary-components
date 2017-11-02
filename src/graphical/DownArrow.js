@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 export default class DownArrow extends PureComponent {
-
     render() {
         return (
             <svg width="2em" height="2em" viewBox="0 0 100 100">

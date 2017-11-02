@@ -2,12 +2,11 @@ import React, { PureComponent } from 'react';
 import { FormattedNumber } from 'react-intl';
 
 export default class NumberPlain extends PureComponent {
-
 	props: {
-		className?: string,
-		currency?: string,
-		digits: number,
-		style: 'decimal' | 'currency' | 'percent',
+		className: string,
+		currency: string,
+		digits?: number,
+		style?: 'decimal' | 'currency' | 'percent',
 		value: number,
 	};
 
@@ -20,7 +19,7 @@ export default class NumberPlain extends PureComponent {
 		const { currency, className, digits, style } = this.props;
 		const value = +this.props.value;
 
-		if (isNaN(value)) return null;
+		if (Number.isNaN(value)) return null;
 
 		return (
 			<span className={className}>

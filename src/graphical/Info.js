@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 export default class Clock extends PureComponent {
-
     props: {
         tooltip: string,
     };
@@ -14,7 +13,7 @@ export default class Clock extends PureComponent {
                 <img
                     className="info-icon"
                     src="img/info.svg"
-                    role="presentation"
+                    alt=""
                 />
                 {tooltip && <div className="tooltip">{tooltip}</div>}
             </span>

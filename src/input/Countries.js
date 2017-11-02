@@ -7,11 +7,10 @@ type Residence = {
 }
 
 export default class Countries extends PureComponent {
-
 	props: {
 		value: string,
 		onChange: (e: SyntheticEvent) => void,
-		residenceList: Residence[],
+		residenceList?: Residence[],
 		readOnly: boolean,
 	};
 
@@ -24,17 +23,17 @@ export default class Countries extends PureComponent {
 
 		return (
 			<select name="residence" onChange={onChange} defaultValue={value} readOnly={readOnly}>
-                <option value="">Country of Residence</option>
-				{residenceList.map((x: Residence) =>
-                    <option
-                        key={x.value}
-                        value={x.value}
-                        disabled={x.disabled}
-                    >
-                        {x.text}
-                    </option>
-                 )}
-            </select>
+				<option value="">Country of Residence</option>
+				{residenceList.map((x: Residence) => (
+					<option
+						key={x.value}
+						value={x.value}
+						disabled={x.disabled}
+					>
+						{x.text}
+					</option>
+				))}
+			</select>
 		);
 	}
 }

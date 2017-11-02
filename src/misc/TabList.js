@@ -4,15 +4,14 @@ type Props = {
     id: string,
     className: string,
     children: Node,
-    activeIndex: number,
-    vertical: bool,
-    showText: bool,
-    showIcons: bool,
+    activeIndex?: number,
+    vertical?: bool,
+    showText?: bool,
+    showIcons?: bool,
     onChange: (index: number) => void,
 };
 
 export default class TabList extends PureComponent {
-
     props: Props;
 
     state: {
@@ -52,7 +51,7 @@ export default class TabList extends PureComponent {
                 role="tablist"
                 className={(vertical ? 'vertical ' : '') + className}
             >
-                {React.Children.map(this.props.children, (child: React$Element<any>, index: number): React$Element<any> =>
+                {React.Children.map(this.props.children, (child: React$Element<any>, index: number): React$Element<any> => (
                     child && React.cloneElement(child, {
                         selected: activeIndex === index,
                         showIcon: showIcons,
@@ -60,7 +59,7 @@ export default class TabList extends PureComponent {
                         index,
                         onClick: () => this.onTabSelected(index),
                     })
-                )}
+                ))}
             </div>
         );
     }
