@@ -12,9 +12,7 @@ export default class NumberColored extends PureComponent {
 	};
 
 	static defaultProps = {
-		digits: 2,
-		currency: undefined,
-		className: undefined
+		digits: 2
 	};
 
 	render() {
