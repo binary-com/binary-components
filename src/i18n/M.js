@@ -3,11 +3,17 @@ import { FormattedMessage } from 'react-intl';
 
 export default class M extends PureComponent {
 	props: {
-		id: string,
-		className: string,
+		id?: string,
+		className?: string,
 		m: string,
-		values: Object,
+		values?: Object,
 	};
+
+	static defaultProps = {
+		id: undefined,
+		values: undefined,
+		className: undefined
+    };
 
 	render() {
 		const { m, values, id, className } = this.props;

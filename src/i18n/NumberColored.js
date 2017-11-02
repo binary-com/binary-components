@@ -5,14 +5,16 @@ import NumberPlain from './NumberPlain';
 
 export default class NumberColored extends PureComponent {
 	props: {
-		className: string,
-		currency: string,
+		className?: string,
+		currency?: string,
 		digits?: number,
 		value: number,
 	};
 
 	static defaultProps = {
 		digits: 2,
+		currency: undefined,
+		className: undefined
 	};
 
 	render() {
