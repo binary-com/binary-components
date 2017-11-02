@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 import CloseButton from '../src/graphical/CloseButton';
 import BackButton from '../src/graphical/BackButton';
 import Direction from '../src/graphical/Direction';
