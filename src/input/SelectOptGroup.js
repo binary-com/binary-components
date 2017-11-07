@@ -37,7 +37,7 @@ export default class SelectOptGroup extends PureComponent {
             <optgroup label={l}>
               {options.map((o: Option) => o.group === l &&
                 <option key={o.value} value={o.value} disabled={o.disabled}>{o.text}</option>
-              );}
+              )}
             </optgroup>
           });}
         </select>
