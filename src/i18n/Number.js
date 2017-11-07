@@ -3,7 +3,6 @@ import NumberPlain from './NumberPlain';
 import NumberColored from './NumberColored';
 
 export default class Number extends PureComponent {
-
     props: {
         isProfit: boolean,
         value: number,

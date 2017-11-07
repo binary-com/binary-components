@@ -3,7 +3,6 @@ import classnames from 'classnames';
 import P from './P';
 
 export default class ErrorMsg extends PureComponent {
-
 	props: {
 		className: string,
 		text: string,

@@ -7,7 +7,6 @@ type Option = {
 }
 
 export default class MultiSelectGroup extends PureComponent {
-
   props: {
     className: string,
     label: string,

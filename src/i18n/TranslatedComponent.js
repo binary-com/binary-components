@@ -2,10 +2,9 @@ import React, { PureComponent } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 export default class TranslatedComponent extends PureComponent {
-
 	props: {
 		component: string,
-		text: string,
+		text?: string,
 	};
 
 	static defaultProps = {

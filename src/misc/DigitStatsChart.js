@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { arrayMin, arrayMax } from 'binary-utils';
 
 export default class DigitStatsChart extends PureComponent {
-
 	props: {
 		orientation: string,
 		stats: number[],
@@ -20,7 +19,7 @@ export default class DigitStatsChart extends PureComponent {
 
 		return (
 			<div className={'digit-stats-chart ' + orientation}>
-				{stats.map((x: number, i: number) =>
+				{stats.map((x: number, i: number) => (
 					<div key={i} className="digit-stats-col">
 						<div
 							className="digit-stats-percentage"
@@ -35,7 +34,7 @@ export default class DigitStatsChart extends PureComponent {
 						/>
 						<div className="digit-stats-digit">{i}</div>
 					</div>
-				)}
+				))}
 			</div>
 		);
 	}

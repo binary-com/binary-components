@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import M from '../i18n/M';
 
 export default class RadioItem extends PureComponent {
-
 	props: {
 		checked: boolean,
 		defaultChecked?: boolean,
@@ -32,7 +31,7 @@ export default class RadioItem extends PureComponent {
 					onChange={onChange}
 				/>
 				<label htmlFor={value}>
-					{img ? <img src={img} role="presentation" /> : null}
+					{img ? <img src={img} alt="" /> : null}
 					{typeof label === 'string' ? <M m={label} /> : label}
 				</label>
 			</span>

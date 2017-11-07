@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { sequence } from 'binary-utils';
 
 export default class DobYear extends PureComponent {
-
 	props: {
 		year: number,
 		onYearChange: (e: SyntheticEvent) => void,
@@ -16,9 +15,9 @@ export default class DobYear extends PureComponent {
 		return (
 			<select id="dobyy" name="dobyy" defaultValue={year} onChange={onYearChange}>
 				<option disabled>Year</option>
-				{years.map((o: number, i: number) =>
+				{years.map((o: number, i: number) => (
 					<option key={i} value={lastValidYear - i}>{lastValidYear - i}</option>
-				)}
+				))}
 			</select>
 		);
 	}

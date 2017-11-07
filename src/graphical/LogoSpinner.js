@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 
 export default class LogoSpinner extends PureComponent {
-
 	props: {
 		spinning: boolean,
 	};

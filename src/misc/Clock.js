@@ -2,11 +2,10 @@ import React, { PureComponent } from 'react';
 import { dateToGMTString } from 'binary-utils';
 
 type Props = {
-    serverTimeDiff: number,
+    serverTimeDiff?: number,
 };
 
 export default class Clock extends PureComponent {
-
     props: Props;
 
     state: {

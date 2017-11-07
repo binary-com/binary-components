@@ -8,9 +8,8 @@ type Options = {
 }
 
 export default class RadioGroup extends PureComponent {
-
 	props: {
-		className: string,
+		className?: string,
 		name: string,
 		options: Options[],
 		onChange: (e: SyntheticEvent) => void,
@@ -27,7 +26,7 @@ export default class RadioGroup extends PureComponent {
 
 		return (
 			<fieldset className={className}>
-				{options.map((o: Options) =>
+				{options.map((o: Options) => (
 					<RadioItem
 						key={name + o.value}
 						checked={o.value === value}
@@ -37,7 +36,7 @@ export default class RadioGroup extends PureComponent {
 						onChange={onChange}
 						value={o.value}
 					/>
-				)}
+				))}
 			</fieldset>
 		);
 	}

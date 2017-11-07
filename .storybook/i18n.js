@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 import { IntlProvider } from 'react-intl';
 import M from '../src/i18n/M';
 import Button from '../src/i18n/Button';

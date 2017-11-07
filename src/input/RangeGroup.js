@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import Label from '../i18n/Label';
 
 export default class RangeGroup extends PureComponent {
-
 	props: {
 		items: number[],
 		id: string,

@@ -4,7 +4,6 @@ import DobMonth from './DobMonth';
 import DobYear from './DobYear';
 
 export default class DateOfBirth extends PureComponent {
-
 	props: {
 		date: Date,
 		onDayChange: (e: SyntheticEvent) => void,

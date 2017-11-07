@@ -8,7 +8,6 @@ type Option = {
 }
 
 export default class SelectGroup extends PureComponent {
-
 	props: {
 		hint: string,
 		id: string,
@@ -31,9 +30,9 @@ export default class SelectGroup extends PureComponent {
 			<fieldset className={className}>
 				{label && <Label htmlFor={id} text={label} />}
 				<select id={id} readOnly={readOnly} onChange={onChange} value={value}>
-					{options.map((o: Option) =>
+					{options.map((o: Option) => (
 						<option key={o.value} value={o.value} disabled={o.disabled}>{o.text}</option>
-					)}
+					))}
 				</select>
 				{hint && <p className="hint">{hint}</p>}
 			</fieldset>

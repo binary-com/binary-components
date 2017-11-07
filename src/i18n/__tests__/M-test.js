@@ -1,11 +1,11 @@
 import React from 'react';
-import { shallow, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { IntlProvider } from 'react-intl';
 import M from '../M';
 
 describe('<M />', () => {
     it('renders a translated span', () => {
-        const wrapper = render(
+        const wrapper = mount(
             <IntlProvider locale="en">
                 <M m="someText" />
              </IntlProvider>

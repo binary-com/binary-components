@@ -5,26 +5,26 @@ type Dimensions = {
 	height: number,
 }
 
-const DirectionNone = ({ width, height }: Dimensions) =>
+const DirectionNone = ({ width, height }: Dimensions) => (
 	<rect
 		x={width / 5}
 		y={height / 5 * 3}
 		width={width / 5 * 3}
 		height={height / 5}
 		style={{ fill: 'grey ' }}
-	/>;
+	/>);
 
-const DirectionUp = ({ width, height }: Dimensions) =>
+const DirectionUp = ({ width, height }: Dimensions) => (
 	<polygon
 		points={`0,${height} ${width},${height} ${width / 2},${height / 5 * 2}`}
 		style={{ fill: 'green' }}
-	/>;
+	/>);
 
-const DirectionDown = ({ width, height }: Dimensions) =>
+const DirectionDown = ({ width, height }: Dimensions) => (
 	<polygon
 		points={`0,${height / 5 * 2} ${width},${height / 5 * 2} ${width / 2},${height}`}
 		style={{ fill: 'red' }}
-	/>;
+	/>);
 
 const getDirectionComponent = (diff: number) => {
 	switch (Math.sign(diff)) {
@@ -35,7 +35,6 @@ const getDirectionComponent = (diff: number) => {
 };
 
 export default class Direction extends PureComponent {
-
 	props: {
 		diff: number,
 		width: number,

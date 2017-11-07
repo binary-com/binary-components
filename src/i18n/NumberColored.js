@@ -4,17 +4,15 @@ import { directionClassName } from 'binary-utils';
 import NumberPlain from './NumberPlain';
 
 export default class NumberColored extends PureComponent {
-
 	props: {
 		className?: string,
 		currency?: string,
-		digits: number,
+		digits?: number,
 		value: number,
 	};
 
 	static defaultProps = {
-		style: 'currency',
-		digits: 2,
+		digits: 2
 	};
 
 	render() {

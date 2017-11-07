@@ -1,5 +1,5 @@
 import React from 'react';
-import { storiesOf } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
 import { IntlProvider } from 'react-intl';
 import Clock from '../src/misc/Clock';
 import DigitStatsChart from '../src/misc/DigitStatsChart';

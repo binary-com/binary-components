@@ -4,10 +4,9 @@ import Direction from './Direction';
 import NumberPlain from '../i18n/NumberPlain';
 
 export default class DirectionAndValue extends PureComponent {
-
 	props: {
 		diff: number,
-		value: number,
+		value?: number,
 	};
 
 	static defaultProps = {

@@ -2,7 +2,6 @@ import React, { PureComponent } from 'react';
 import { FormattedDate } from 'react-intl';
 
 export default class FormattedDateRange extends PureComponent {
-
 	props: {
 		fromDate: Date,
 		toDate: Date,

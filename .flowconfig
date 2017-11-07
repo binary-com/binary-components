@@ -7,6 +7,7 @@
 .*/lib
 .*/index.js
 .*/__tests__
+.*/src/_utils/enzyme-setup.js
 .*/.storybook
 
 [include]

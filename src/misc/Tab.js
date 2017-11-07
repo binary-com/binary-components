@@ -3,16 +3,15 @@ import CloseButton from '../graphical/CloseButton';
 import M from '../i18n/M';
 
 export default class Tab extends PureComponent {
-
     props: {
         imgSrc: string,
         img: any,
         selected: boolean,
-        showIcon: boolean,
-        showText: boolean,
+        showIcon?: boolean,
+        showText?: boolean,
         text: string,
         tooltip: string,
-        closable: bool,
+        closable?: bool,
         onClick: (e: SyntheticEvent) => void,
         onClose: (e: SyntheticEvent) => void,
     };
@@ -33,7 +32,7 @@ export default class Tab extends PureComponent {
                 title={text}
                 onClick={this.props.onClick}
             >
-                {showIcon && imgSrc && <img src={imgSrc} role="presentation" />}
+                {showIcon && imgSrc && <img src={imgSrc} alt="" />}
                 {showIcon && img}
                 {showText && text && <M m={text} />}
                 {closable && <CloseButton onClick={onClose} />}
