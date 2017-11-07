@@ -39,7 +39,7 @@ export default class SelectOptGroup extends PureComponent {
                 <option key={o.value} value={o.value} disabled={o.disabled}>{o.text}</option>
               )}
             </optgroup>
-          });}
+          })}
         </select>
         {hint && <p className="hint">{hint}</p>}
       </fieldset>
