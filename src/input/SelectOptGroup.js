@@ -27,7 +27,7 @@ export default class SelectOptGroup extends PureComponent {
 
   render() {
     const { className, id, label, hint, value, options, readOnly, onChange } = this.props;
-    const labels = options.map((a: Object) => a.group).filter((elem: string, index: number, self: Array) => index === self.indexOf(elem));
+    const labels = options.map((a: Object) => a.group).filter((elem: string, index: number, self: ?Array<any>) => index === self.indexOf(elem));
 
     return (
       <fieldset className={className}>
