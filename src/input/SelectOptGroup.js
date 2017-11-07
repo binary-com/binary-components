@@ -27,19 +27,19 @@ export default class SelectOptGroup extends PureComponent {
 
   render() {
     const { className, id, label, hint, value, options, readOnly, onChange } = this.props;
-    const labels = options.map(a => a.group).filter((elem, index, self) => index === self.indexOf(elem));
+    const labels = options.map((a: Object) => a.group).filter((elem: string, index: number, self: Array) => index === self.indexOf(elem));
 
     return (
       <fieldset className={className}>
         {label && <Label htmlFor={id} text={label} />}
         <select id={id} readOnly={readOnly} onChange={onChange} value={value}>
-          {labels.map((l) => {
+          {labels.map((l: string) => {
             <optgroup label={l}>
               {options.map((o: Option) => o.group === l &&
                 <option key={o.value} value={o.value} disabled={o.disabled}>{o.text}</option>
-              )}
+              );}
             </optgroup>
-          })}
+          });}
         </select>
         {hint && <p className="hint">{hint}</p>}
       </fieldset>
