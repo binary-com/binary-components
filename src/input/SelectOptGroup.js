@@ -34,7 +34,7 @@ export default class SelectOptGroup extends PureComponent {
         {label && <Label htmlFor={id} text={label} />}
         <select id={id} readOnly={readOnly} onChange={onChange} value={value}>
           {labels.map((l: string) =>
-            <optgroup label={l}>
+            <optgroup label={l} key={l}>
               {options.map((o: Option) => o.group === l &&
                 <option key={o.value} value={o.value} disabled={o.disabled}>{o.text}</option>
               )}
