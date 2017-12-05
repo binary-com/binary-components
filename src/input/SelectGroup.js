@@ -14,7 +14,7 @@ export default class SelectGroup extends PureComponent {
 		className: string,
 		label: string,
 		options: Option[],
-		readOnly: bool,
+    disabled: boolean,
 		value: string,
 		onChange: (e: SyntheticEvent) => void,
 	};
@@ -24,12 +24,12 @@ export default class SelectGroup extends PureComponent {
 	};
 
 	render() {
-		const { className, id, label, hint, value, options, readOnly, onChange } = this.props;
+		const { className, id, label, hint, value, options, disabled, onChange } = this.props;
 
 		return (
 			<fieldset className={className}>
 				{label && <Label htmlFor={id} text={label} />}
-				<select id={id} readOnly={readOnly} onChange={onChange} value={value}>
+				<select id={id} disabled={disabled} onChange={onChange} value={value}>
 					{options.map((o: Option) => (
 						<option key={o.value} value={o.value} disabled={o.disabled}>{o.text}</option>
 					))}
