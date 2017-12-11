@@ -11,7 +11,7 @@ export default class Countries extends PureComponent {
 		value: string,
 		onChange: (e: SyntheticEvent) => void,
 		residenceList: Residence[],
-		readOnly: boolean,
+		disabled: boolean,
 	};
 
 	static defaultProps = {
@@ -19,10 +19,10 @@ export default class Countries extends PureComponent {
 	};
 
 	render() {
-		const { onChange, value, residenceList, readOnly } = this.props;
+		const { onChange, value, residenceList, disabled } = this.props;
 
 		return (
-			<select name="residence" onChange={onChange} defaultValue={value} readOnly={readOnly}>
+			<select name="residence" onChange={onChange} defaultValue={value} disabled={disabled}>
 				<option value="">Country of Residence</option>
 				{residenceList.map((x: Residence) => (
 					<option
