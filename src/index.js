@@ -33,6 +33,7 @@ export { default as DobYear } from './input/DobYear';
 export { default as InputGroup } from './input/InputGroup';
 export { default as NumericInput } from './input/NumericInput';
 export { default as RadioGroup } from './input/RadioGroup';
+export { default as GroupedRadioGroup } from './input/GroupedRadioGroup';
 export { default as RadioItem } from './input/RadioItem';
 export { default as RangeGroup } from './input/RangeGroup';
 export { default as SelectGroup } from './input/SelectGroup';
