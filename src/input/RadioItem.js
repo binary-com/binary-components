@@ -27,7 +27,7 @@ export default class RadioItem extends PureComponent {
 					type="radio"
 					name={name}
 					value={value}
-					defaultChecked={defaultChecked}
+					defaultChecked={checked !== undefined ? undefined : defaultChecked}
 					onChange={onChange}
 				/>
 				<label htmlFor={value}>
