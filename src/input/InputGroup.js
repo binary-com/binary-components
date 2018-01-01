@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Label from '../i18n/Label';
-import P from '../i18n/Notice';
+import P from '../i18n/P';
 
 export default class InputGroup extends PureComponent {
 	props: {
