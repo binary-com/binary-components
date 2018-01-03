@@ -8,6 +8,7 @@ type Props = {
     integer: boolean,
     defaultValue: number,
     step: number,
+    value: string,
     valueList: number[],
     onChange: (newValue: number) => void,
 }
@@ -29,7 +30,7 @@ export default class NumericInput extends PureComponent {
         super(props);
 
         this.state = {
-            value: props.defaultValue.toString(),
+            value: props.value || props.defaultValue.toString(),
         };
     }
 
@@ -86,6 +87,11 @@ export default class NumericInput extends PureComponent {
 
     onChange = (e: any) =>
         this.changeValue(e.target.value);
+
+    componentWillReceiveProps(nextProps: Props) {
+        const { value } = nextProps;
+        if (value) this.setState({ value });
+    }
 
     render() {
         const { integer, className, min, max, valueList } = this.props;
