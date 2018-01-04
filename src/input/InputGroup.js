@@ -1,18 +1,20 @@
 import React, { PureComponent } from 'react';
 import { FormattedMessage } from 'react-intl';
 import Label from '../i18n/Label';
+import P from '../i18n/P';
 
 export default class InputGroup extends PureComponent {
 	props: {
 		id: string,
 		className: string,
 		label: string,
+		hint: string,
 		placeholder: string,
 		readOnly: boolean,
 	};
 
 	render() {
-		const { label, className, id, placeholder, readOnly, ...rest } = this.props;
+		const { label, hint, className, id, placeholder, readOnly, ...rest } = this.props;
 
 		return (
 			<fieldset className={className}>
@@ -25,6 +27,7 @@ export default class InputGroup extends PureComponent {
 					</FormattedMessage> :
 					<input id={id} {...rest} />
 				}
+				{hint && <P text={hint} />}
 			</fieldset>
 		);
 	}
