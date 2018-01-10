@@ -29,8 +29,11 @@ export default class NumericInput extends PureComponent {
     constructor(props: Props) {
         super(props);
 
+        let v = props.value;
+        if (typeof v === 'number') v = v.toString();
+
         this.state = {
-            value: props.value || props.defaultValue.toString(),
+            value: v || props.defaultValue.toString(),
         };
     }
 
@@ -90,7 +93,7 @@ export default class NumericInput extends PureComponent {
 
     componentWillReceiveProps(nextProps: Props) {
         const { value } = nextProps;
-        if (value) this.setState({ value });
+        if (value) this.setState({ value: value.toString() });
     }
 
     render() {
